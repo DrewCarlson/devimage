@@ -4,8 +4,8 @@ RUN apt-get update
 
 RUN apt-get install -y curl gnupg
 
-RUN sudo apt-get update
-RUN sudo apt-get upgrade -y
+RUN apt-get update
+RUN apt-get upgrade -y
 
 # Misc
 RUN apt-get -y git rsync unzip zip
@@ -31,7 +31,7 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 RUN curl https://krypt.co/kr | sh
 
 # Sdkman
-RUN apt install unzip zip && curl -s https://get.sdkman.io | bash
+RUN apt-get install unzip zip && curl -s https://get.sdkman.io | bash
 
 # Cleanup
 RUN apt-get autoremove && sudo apt-get clean
