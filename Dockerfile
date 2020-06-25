@@ -34,4 +34,4 @@ RUN curl https://krypt.co/kr | sh
 RUN apt-get install unzip zip && curl -s https://get.sdkman.io | bash
 
 # Cleanup
-RUN apt-get autoremove && sudo apt-get clean
+RUN apt-get autoremove && apt-get clean
