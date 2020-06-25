@@ -4,10 +4,7 @@ USER code
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y curl gnupg
-
-# Misc
-RUN apt-get -y git rsync unzip zip
+RUN apt-get install -y curl gnupg git rsync unzip zip
 
 # Zsh
 RUN apt-get install zsh -y \
@@ -30,7 +27,7 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 RUN curl https://krypt.co/kr | sh
 
 # Sdkman
-RUN apt-get install unzip zip && curl -s https://get.sdkman.io | bash
+RUN apt-get curl -s https://get.sdkman.io | bash
 
 # Cleanup
 RUN apt-get autoremove && apt-get clean
