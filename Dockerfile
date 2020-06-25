@@ -1,11 +1,10 @@
 FROM debian:10
 
-RUN apt-get update
-
-RUN apt-get install -y curl gnupg
+USER code
 
 RUN apt-get update
 RUN apt-get upgrade -y
+RUN apt-get install -y curl gnupg
 
 # Misc
 RUN apt-get -y git rsync unzip zip
